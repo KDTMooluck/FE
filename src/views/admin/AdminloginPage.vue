@@ -29,7 +29,7 @@
           />
         </div>
         <button @click="handleLogin" class="submit-button">로그인</button>
-        <button @click="goToSignUp" class="signup-button">신규 담당자 등록</button>
+        <button @click="goToSignup" class="signup-button">신규 담당자 등록</button>
       </div>
     </div>
     <div class="back-button" @click="goBack">
@@ -95,6 +95,13 @@ async function handleLogin() {
   //   console.error('로그인 실패:', error.message);
   //   alert(`❌ 로그인 실패: ${error.message}`);
   // }
+}
+
+function goBack() {
+  router.push({ name: 'home' });
+}
+function goToSignup() {
+  router.push('/signup')
 }
 
 // function handleLogout() {
@@ -233,7 +240,7 @@ label {
 /* 뒤로가기 버튼 */
 .back-button {
   position: absolute;
-  bottom: 20px;
+  bottom: 70px;
   right: 20px;
   width: 50px;
   height: 50px;
